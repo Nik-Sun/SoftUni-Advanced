@@ -30,7 +30,7 @@ namespace _18.CrossRoads
                             if (currentLight + freeTime < 0)
                             {
                                 Console.WriteLine("A crash happened!");
-                                Console.WriteLine($"{currentCar} was hit in {currentCar[currentCar.Length - Math.Abs(currentLight + freeTime)]}");
+                                Console.WriteLine($"{currentCar} was hit at {currentCar[currentCar.Length - Math.Abs(currentLight + freeTime)]}.");
                                 Environment.Exit(0);
                             }
                             else
