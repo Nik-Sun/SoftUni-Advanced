@@ -11,7 +11,7 @@ namespace EqualityLogic
 
         public override bool Equals([AllowNull] Person x, [AllowNull] Person y)
         {
-            if (x.Name.ToUpper().CompareTo( y.Name.ToUpper())==0 && x.Age == y.Age)
+            if (x.Name.CompareTo(y.Name)==0 && x.Age == y.Age)
             {
                 return true;
             }
@@ -22,7 +22,7 @@ namespace EqualityLogic
 
         public override int GetHashCode([DisallowNull] Person obj)
         {
-            return HashCode.Combine(obj.Name.ToUpper(), obj.Age);
+            return HashCode.Combine(obj.Name, obj.Age);
         }
     }
 }

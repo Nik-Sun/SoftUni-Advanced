@@ -18,7 +18,7 @@ namespace EqualityLogic
 
         public int CompareTo( Person other)
         {
-            if (Name.ToUpper().CompareTo(other.Name.ToUpper()) == 0)
+            if (Name.CompareTo(other.Name) == 0)
             {
                 if (Age.CompareTo(other.Age) == 0)
                 {
@@ -26,7 +26,7 @@ namespace EqualityLogic
                 }
                 return Age.CompareTo(other.Age);
             }
-            return Name.ToUpper().CompareTo(other.Name.ToUpper());
+            return Name.CompareTo(other.Name);
         }
 
         
